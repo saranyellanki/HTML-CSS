@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" 
+        href="../assets/download.jpg">
+        <title>Flex test</title>
+        <style>
+            body {padding: 0em;}
+            .headerContainer {
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background-color: cadetblue;
+                font-weight: bold;
+                padding: 10px;
+            }
+
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background-color:crimson;
+                font-weight: bold;
+                padding: 15px;
+            }
+
+            .mainContainer{
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .mainContentItem {
+                text-align: left;
+                background-color: burlywood;
+            }
+
+            article {
+                padding: 10px;
+                margin: 10px;
+                background-color:cornsilk;
+            }
+
+            .sideBarLeftItem { background-color:yellow;}
+            .sideBarRightItem {background-color: royalblue;}
+
+            .sideBarItem { flex: 1 0 0;}
+            .mainContentItem {flex: 3 0px}
+            .sideBarLeftItem{order: 1;}
+            .mainContentItem{order: 2;}
+            .sideBarRightItem{order: 3;}
+
+        </style>
+    </head>
+    <body>
+        <header class="headerContainer">
+            <h1>Header - Sample Flexbox Example</h1>
+        </header>
+        <div class="mainContainer">
+            <section class="mainContentItem">
+                <article>
+                    <h2>JAVA</h2>
+
+                    <p>Java is a programming language and computing platform first released by Sun Microsystems in 1995. 
+                        It has evolved from humble beginnings to power a large share of today’s digital world, 
+                        by providing the reliable platform upon which many services and applications are built. 
+                        There are many applications and even some websites that will not function unless you have Java installed. Java.com, this website, 
+                        is intended for consumers who require Java for their desktop applications – specifically applications targeting Java 8.</p>
+                </article>
+                <article>
+                    <h2>JavaScript</h2>
+
+                    <p>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — 
+                        every time a web page does more than just sit there and display static information for you to look at — 
+                        displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — 
+                        you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web 
+                        technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.
+
+                    </p>
+                </article>
+                <article>
+                    <h2>Python</h2>
+
+                    <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
+                        Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive 
+                        for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. 
+                        Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. 
+                        Python supports modules and packages, which encourages program modularity and code reuse. 
+                        The Python interpreter and the extensive standard library are available in source or binary 
+                        form without charge for all major platforms, and can be freely distributed.</p>
+                </article>
+            </section>
+            <sideBar class="sideBarItem sideBarLeftItem"><div class="center"><p>Left Side Bar</p></div></sideBar>
+            <sideBar class="sideBarItem sideBarRightItem"><div class="center"><p>Right Side Bar</p></div></sideBar>
+        </div>
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
